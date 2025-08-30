@@ -1,6 +1,21 @@
 extends Area2D
 
-
+@export var damage: int
+@export var speed: int
 
 func _process(delta: float) -> void:
-	position.y += 200 * delta
+	position.y -= speed * delta
+
+
+func _on_area_entered(area: Area2D) -> void:
+	if area.get_script():
+		var script = area.get_script()
+		if area.has_method("take_damage"):
+			script.take_damage(damage)
+			queue_free()
+	pass # Replace with function body.
+
+
+func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
+	queue_free()
+	pass # Replace with function body.

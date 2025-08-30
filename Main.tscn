@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dp08vxf3i761g"]
+[gd_scene load_steps=5 format=3 uid="uid://dp08vxf3i761g"]
 
 [ext_resource type="Script" uid="uid://dd3ljjl3fm0if" path="res://BulletManger.gd" id="1_uu6xs"]
-[ext_resource type="PackedScene" uid="uid://nxly7hr4cofn" path="res://bullet.tscn" id="2_r0du0"]
 [ext_resource type="PackedScene" uid="uid://8k2kj8w303id" path="res://Player.tscn" id="3_cm0pq"]
+[ext_resource type="PackedScene" uid="uid://c302dt17rccf6" path="res://enemyProjectile.tscn" id="4_cm0pq"]
+[ext_resource type="PackedScene" uid="uid://dnyh1i3brqju6" path="res://Boss.tscn" id="4_fos0i"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -13,7 +14,7 @@ position = Vector2(561, 581)
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(556, 627)
 script = ExtResource("1_uu6xs")
-bullet = ExtResource("2_r0du0")
+bullet = ExtResource("4_cm0pq")
 
 [node name="Right" type="Marker2D" parent="Node2D"]
 position = Vector2(588, -620)
@@ -23,5 +24,11 @@ position = Vector2(-539, -624)
 
 [node name="Timer" type="Timer" parent="Node2D"]
 autostart = true
+
+[node name="Boss" parent="." instance=ExtResource("4_fos0i")]
+position = Vector2(552, 166)
+collision_layer = 2
+collision_mask = 2
+health = 100
 
 [connection signal="timeout" from="Node2D/Timer" to="Node2D" method="_on_timer_timeout"]
