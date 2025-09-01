@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://3m7k5b8v6atw"]
+
+[ext_resource type="Script" uid="uid://bj6001jtltcpx" path="res://PlayerUi.gd" id="1_f18w4"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f18w4")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = 820.0
+offset_top = 612.0
+offset_right = 1144.0
+offset_bottom = 639.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 907.0
+offset_top = 571.0
+offset_right = 947.0
+offset_bottom = 594.0
+theme_override_font_sizes/font_size = 26
+text = "10"
