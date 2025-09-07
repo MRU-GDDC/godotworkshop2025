@@ -11,14 +11,14 @@ script = ExtResource("1_fd7bo")
 damage = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.536221, 0.545673)
+scale = Vector2(0.266, 0.272)
 texture = ExtResource("2_wmt3s")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2(3.23025, 3.36835)
+scale = Vector2(0.266, 0.272)
 shape = SubResource("RectangleShape2D_v8qja")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
-scale = Vector2(3.26255, 3.17972)
+scale = Vector2(0.266, 0.272)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

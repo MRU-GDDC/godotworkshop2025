@@ -7,8 +7,8 @@ func _ready() -> void:
 	position = Vector2(0,30)
 	var tween = get_tree().create_tween()
 	tween.set_loops(0)
-	tween.tween_property($".","position",Vector2(1000,30),randf_range(5,8))
-	tween.chain().tween_property($".","position",Vector2(30,30),randf_range(5,8))
+	tween.tween_property($".","position",Vector2(460,30),randf_range(3,6))
+	tween.chain().tween_property($".","position",Vector2(30,30),randf_range(3,6))
 	pass # Replace with function body.
 func take_damage(damage: int):
 	health = health  - damage

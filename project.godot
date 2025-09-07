@@ -20,6 +20,15 @@ config/icon="res://icon.svg"
 PlayerStats="*res://player_stats.gd"
 GameManager="*res://game_manager.gd"
 
+[display]
+
+window/size/viewport_width=520
+window/size/viewport_height=320
+window/size/window_width_override=960
+window/size/window_height_override=640
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+
 [input]
 
 Fire_Bullet={
@@ -30,5 +39,6 @@ Fire_Bullet={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"

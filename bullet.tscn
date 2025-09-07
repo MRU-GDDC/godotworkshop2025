@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://nxly7hr4cofn"]
 
 [ext_resource type="Texture2D" uid="uid://y87atvx3mdom" path="res://icon.svg" id="1_v7oki"]
-[ext_resource type="Script" uid="uid://dpvfefmvh213a" path="res://bullet.gd" id="1_v8qja"]
+[ext_resource type="Script" uid="uid://dpvfefmvh213a" path="res://Bullet.gd" id="1_v8qja"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v8qja"]
 size = Vector2(21, 14)
@@ -14,15 +14,15 @@ damage = 5
 speed = 500
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.536221, 0.545673)
+scale = Vector2(0.236, 0.24)
 texture = ExtResource("1_v7oki")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2(3.23025, 3.36835)
+scale = Vector2(0.236, 0.24)
 shape = SubResource("RectangleShape2D_v8qja")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
-scale = Vector2(3.26255, 3.17972)
+scale = Vector2(0.236, 0.24)
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

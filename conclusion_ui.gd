@@ -14,11 +14,13 @@ func _process(delta: float) -> void:
 	pass
 
 func game_over():
-	$lost.visible = true
+	$Lost.visible = true
 	print("lost")
 	pass
 func victory():
 	$winner.visible = true
+	$winner/VBoxContainer/WinnerScore.text = "score : " + str(PlayerStats.player_score) 
+	
 	print("winner")
 
 	pass

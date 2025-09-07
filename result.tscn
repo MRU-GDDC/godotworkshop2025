@@ -9,14 +9,59 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_ejids")
 
+[node name="Lost" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 2
+offset_left = 93.0
+offset_top = 91.0
+offset_right = 393.0
+offset_bottom = 241.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Lost"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 70
+
+[node name="Label" type="Label" parent="Lost/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 31
+text = "you won"
+horizontal_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="retry" type="Button" parent="Lost/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0.778397, 0.200127, 0.503493, 1)
+theme_override_colors/icon_normal_color = Color(0.941121, 0, 0.203402, 1)
+text = "Retry"
+
 [node name="winner" type="PanelContainer" parent="."]
 visible = false
 layout_mode = 2
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 93.0
+offset_top = 91.0
+offset_right = 393.0
+offset_bottom = 241.0
 
-[node name="lost" type="PanelContainer" parent="."]
-visible = false
+[node name="VBoxContainer" type="VBoxContainer" parent="winner"]
 layout_mode = 2
-offset_right = 40.0
-offset_bottom = 40.0
+theme_override_constants/separation = 15
+
+[node name="Label" type="Label" parent="winner/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 31
+text = "you won"
+horizontal_alignment = 1
+
+[node name="WinnerScore" type="Label" parent="winner/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 31
+text = "score"
+horizontal_alignment = 1
+
+[node name="retry" type="Button" parent="winner/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0.778397, 0.200127, 0.503493, 1)
+theme_override_colors/icon_normal_color = Color(0.941121, 0, 0.203402, 1)
+text = "Retry"
